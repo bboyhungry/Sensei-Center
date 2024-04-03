@@ -1,0 +1,35 @@
+table {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td,
+  table th {
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #BFD3BD;
+  }
+
+  table tr:nth-child(odd) {
+    background-color:#DAE6D9; /* Change this color to your desired odd row color */
+  }
+  
+  table tr:hover {
+    background-color: #ddd;
+  }
+  
+  table th, tfoot td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #E3E3D6;
+    color: black;
+  }
+
+.sort-icon {
+    margin-left: 4px; /* Adjust the margin as needed */
+    justify-content: center;
+}
