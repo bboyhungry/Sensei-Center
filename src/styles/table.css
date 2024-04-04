@@ -14,7 +14,7 @@ table {
   }
 
   table tr:nth-child(odd) {
-    background-color:#DAE6D9; /* Change this color to your desired odd row color */
+    background-color:#DAE6D9;
   }
   
   table tr:hover {
@@ -28,11 +28,6 @@ table {
     background-color: #E3E3D6;
     color: black;
   }
-
-.sort-icon {
-    margin-left: 4px; /* Adjust the margin as needed */
-    justify-content: center;
-}
 
 .table-input {
   margin: 16px;
@@ -49,15 +44,21 @@ table {
   display: inline-block;
 }
 
-.icon {
+.search-icon {
   position: absolute;
   top: 50%;
-  right: 16px; /* Adjust the position of the icon */
+  right: 16px;
   transform: translateY(-50%);
   background-color: #BFD3BD;
-  width: 24px; /* Adjust icon size */
-  height: 24px; /* Adjust icon size */
+  /* icon size */
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   padding: 6px;
-  cursor: pointer; /* Add cursor pointer for better user interaction */
+  cursor: pointer;
+}
+
+.sort-icon {
+  margin-left: 4px;
+  justify-content: center;
 }

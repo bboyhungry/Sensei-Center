@@ -35,7 +35,8 @@ const StudentTable = () => {
         },
     });
 
-    const handleFilter = (day: string) => {
+    const onFilterDayChange = (filterArg: {day: string}) => {
+        const { day } = filterArg
         const allColumns = tableInstance.getAllColumns();
         const filterDay = allColumns.find((e) => e.id === "day");
         if (filterDay) {
@@ -51,16 +52,10 @@ const StudentTable = () => {
                     onChange={(e) => setFiltering(e.target.value)} 
                     className="table-input"
                 />
-                <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+                <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
             </div>
-            {/* <input 
-                type="text"
-                placeholder="Search for record..."
-                onChange={(e) => setFiltering(e.target.value)} 
-                className="table-input"
-            /> */}
             <select
-                onChange={(e) => handleFilter(e.target.value)}>
+                onChange={(e) => onFilterDayChange({day: e.target.value})}>
                 <option value="">All Days</option>
                 <option value="Monday">Monday</option>
                 <option value="Tuesday">Tuesday</option>
