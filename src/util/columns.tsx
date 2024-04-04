@@ -40,6 +40,5 @@ export const columnDef: ColumnDef<Student>[] = [
     }) as ColumnDef<Student>,
     columnHelper.accessor("day", {
         header: "Day",
-        enableSorting: false,
     }) as ColumnDef<Student>,
 ]

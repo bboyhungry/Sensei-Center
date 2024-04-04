@@ -33,3 +33,31 @@ table {
     margin-left: 4px; /* Adjust the margin as needed */
     justify-content: center;
 }
+
+.table-input {
+  margin: 16px;
+  padding: 12px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 24px;
+  outline: none;
+  position: relative;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 16px; /* Adjust the position of the icon */
+  transform: translateY(-50%);
+  background-color: #BFD3BD;
+  width: 24px; /* Adjust icon size */
+  height: 24px; /* Adjust icon size */
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer; /* Add cursor pointer for better user interaction */
+}

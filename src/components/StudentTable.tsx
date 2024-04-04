@@ -7,7 +7,7 @@ import {
     SortingState,
     getFilteredRowModel,
 } from "@tanstack/react-table";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { columnDef } from "../util/columns";
 import dataJson from "../data/data.json";
@@ -35,14 +35,41 @@ const StudentTable = () => {
         },
     });
 
+    const handleFilter = (day: string) => {
+        const allColumns = tableInstance.getAllColumns();
+        const filterDay = allColumns.find((e) => e.id === "day");
+        if (filterDay) {
+            filterDay.setFilterValue(day);
+        }
+    }
+
     return (
         <>
-            <input 
+            <div className="input-container">
+                <input 
+                    type="text"
+                    onChange={(e) => setFiltering(e.target.value)} 
+                    className="table-input"
+                />
+                <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+            </div>
+            {/* <input 
                 type="text"
                 placeholder="Search for record..."
                 onChange={(e) => setFiltering(e.target.value)} 
-                style={{ margin: "16px" }}
-            />
+                className="table-input"
+            /> */}
+            <select
+                onChange={(e) => handleFilter(e.target.value)}>
+                <option value="">All Days</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+            </select>
             <table>
                 <thead>
                     {tableInstance.getHeaderGroups().map(headerEl => (
@@ -68,18 +95,8 @@ const StudentTable = () => {
                                             columnEl.column.columnDef.header,
                                             columnEl.getContext(),
                                     )}
-                                    {columnEl.column.getIsSorted() === "asc" && <FontAwesomeIcon className="sort-icon" icon={faCaretUp} />}
-                                    {columnEl.column.getIsSorted() === "desc" && <FontAwesomeIcon className="sort-icon" icon={faCaretDown} />}
-                                    {
-                                        columnEl.column.getCanFilter() ? (
-                                            <div>
-                                                <input 
-                                                    type="text"
-                                                    value={(columnEl.column.getFilterValue() || "") as string}
-                                                    onChange={(e) => columnEl.column.setFilterValue(e.target.value)}
-                                                />
-                                            </div>
-                                        ) : null}
+                                    {columnEl.column.getIsSorted() === "asc" && <FontAwesomeIcon className="sort-icon" icon={faCaretDown} />}
+                                    {columnEl.column.getIsSorted() === "desc" && <FontAwesomeIcon className="sort-icon" icon={faCaretUp} />}
                                 </th>
                             ))}
                         </tr>
