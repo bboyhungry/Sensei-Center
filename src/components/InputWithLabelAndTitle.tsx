@@ -6,10 +6,13 @@ import "../styles/inputWithLabelAndTitle.css";
 interface InputWithLabelAndTitleProps{
     label: string,
     title: string,
+    messageBox: boolean,
 }
 
+const MAX_ROWS = 10;
+
 const InputWithLabelAndTitle = (props: InputWithLabelAndTitleProps) => {
-    const {label, title} = props
+    const {label, title, messageBox} = props
     return (
         <>
             <p>{title}</p>
@@ -19,8 +22,8 @@ const InputWithLabelAndTitle = (props: InputWithLabelAndTitleProps) => {
                 autoComplete="off"
                 className="input"
             >
-                <TextField label={label} />
-            </Box>
+                <TextField label={label} title={title} multiline={messageBox} rows={messageBox ? MAX_ROWS : undefined } fullWidth={messageBox} />
+            </Box> 
         </>
     );
 };
