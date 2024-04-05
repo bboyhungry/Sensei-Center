@@ -11,9 +11,9 @@ import { faCaretDown, faCaretUp, faMagnifyingGlass } from "@fortawesome/free-sol
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { columnDef } from "../util/columns";
 import dataJson from "../data/data.json";
-import "../styles/table.css";
+import "../styles/rosterPage.css";
 
-const StudentTable = () => {
+const RosterPage = () => {
 
     const [sorting, setSorting] = useState<SortingState>([]);
     const [filtering, setFiltering] = useState("");
@@ -55,7 +55,9 @@ const StudentTable = () => {
                 <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
             </div>
             <select
-                onChange={(e) => onFilterDayChange({day: e.target.value})}>
+                onChange={(e) => onFilterDayChange({day: e.target.value})}
+                className="dropdown-input"
+                >
                 <option value="">All Days</option>
                 <option value="Monday">Monday</option>
                 <option value="Tuesday">Tuesday</option>
@@ -117,4 +119,4 @@ const StudentTable = () => {
     );
 };
 
-export default StudentTable
+export default RosterPage

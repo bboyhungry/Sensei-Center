@@ -62,3 +62,9 @@ table {
   margin-left: 4px;
   justify-content: center;
 }
+
+.dropdown-input {
+  background-color: #7C8E7B; 
+  border-radius: 24px;
+  padding: 8px;
+}
