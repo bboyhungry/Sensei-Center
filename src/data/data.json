@@ -4,6 +4,7 @@
     "rate": "$28/hr",
     "time": "7:47 AM - 8:30 AM",
     "day": "Monday",
+    "class": "Biology",
     "picture": "https://media4.s-nbcnews.com/j/newscms/2016_36/1685951/ss-160826-twip-05_8cf6d4cb83758449fd400c7c3d71aa1f.nbcnews-ux-2880-1000.jpg"
   }, {
     "id": 2,
@@ -11,6 +12,7 @@
     "rate": "$24/hr",
     "time": "10:34 AM - 11:30 AM",
     "day": "Tuesday",
+    "class": "Japanese Culture",
     "picture": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/F382/production/_123883326_852a3a31-69d7-4849-81c7-8087bf630251.jpg"
   }, {
     "id": 3,
@@ -18,6 +20,7 @@
     "rate": "$84/hr",
     "time": "7:19 AM - 8:30 AM",
     "day": "Wednesday",
+    "class": "Crime Justice",
     "picture": "https://cdn.vox-cdn.com/thumbor/1s5d2Jrz5zP2M-adotQPbRy4QSk=/0x0:1920x1080/920x613/filters:focal(1052x243:1358x549):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/71884400/The_Spy_x_Family_Anime_Succeeds_Because_of_Its_Characters_.0.jpg"
   }, {
     "id": 4,
@@ -25,6 +28,7 @@
     "rate": "$85/hr",
     "time": "8:12 AM - 9:00 AM",
     "day": "Thursday",
+    "class": "Singing",
     "picture": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ikura_VOGUE_Taiwan_20231227.png"
   }, {
     "id": 5,
@@ -32,6 +36,7 @@
     "rate": "$37/hr",
     "time": "11:23 AM - 12:00 PM",
     "day": "Friday",
+    "class": "Breaking 101",
     "picture": "https://miro.medium.com/v2/resize:fit:720/format:webp/0*gr-E4iv6c_JMThYa.jpg"
   }, {
     "id": 6,
@@ -39,5 +44,6 @@
     "rate": "$45/hr",
     "time": "12:02 AM - 1:00 AM",
     "day": "Saturday",
+    "class": "Kpop Dance",
     "picture": "https://www.allkpop.com/upload/2024/03/content/011748/1709333293-untitled-1.jpg"
   }]

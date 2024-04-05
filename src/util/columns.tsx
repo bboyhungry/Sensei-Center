@@ -5,6 +5,7 @@ type Student = {
     id: number,
     name: string,
     rate: string,
+    class: string,
     time: string,
     day: string,
     picture: string,
@@ -32,6 +33,10 @@ export const columnDef: ColumnDef<Student>[] = [
     }) as ColumnDef<Student>,
     columnHelper.accessor("rate", {
         header: "Rate",
+        enableColumnFilter: false,
+    }) as ColumnDef<Student>,
+    columnHelper.accessor("class", {
+        header: "Class",
         enableColumnFilter: false,
     }) as ColumnDef<Student>,
     columnHelper.accessor("time", {
