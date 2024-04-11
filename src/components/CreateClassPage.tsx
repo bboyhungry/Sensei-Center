@@ -4,11 +4,14 @@ import InputWithLabelAndTitle from "./InputWithLabelAndTitle";
 import FormControl from '@mui/material/FormControl';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
-import InputLabel from '@mui/material/InputLabel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const CreateClassPage = () => {
     return (
         <div className="page-container">
+            <FontAwesomeIcon icon={ faCircleLeft } className="back-icon" />
+
             <h1>New Class Listing</h1>
             <InputWithLabelAndTitle title="What is the name of your class?" label="Classname..." messageBox={false}/>
             <InputWithLabelAndTitle title="What subject does your class focus on?" label="Subject..." messageBox={false}/>
